@@ -1,9 +1,15 @@
 import github from './github'
+import coveralls from './coveralls'
+import codeclimate from './codeclimate'
 
 export default {
-  github
+  github,
+  codeclimate,
+  coveralls
 }
 
 export {
-  github
+  github,
+  codeclimate,
+  coveralls
 }

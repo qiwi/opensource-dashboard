@@ -20,10 +20,6 @@ function getCommits(opts) {
     .getCommits(opts)
 }
 
-function getRefs(opts) {
-  octokit.gitdata.getReference(opts)
-}
-
 export default {
   octokit,
   getRepos,
