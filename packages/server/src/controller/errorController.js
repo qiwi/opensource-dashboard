@@ -1,4 +1,5 @@
 import {formatError, BAD_REQUEST, INTERNAL_SERVER_ERROR} from '../error'
+import log from '../logger'
 
 const DEFAULT_ERROR_CODE = INTERNAL_SERVER_ERROR
 
@@ -16,10 +17,12 @@ export default function(err, req, res, next) {
     .send(data)
 }
 
-export function handleReject(err) {
+export function handleReject(err, res) {
+  log.error(err)
+
   res
-    .status(INTERNAL_SERVER_ERROR)
+    .status(err.code || INTERNAL_SERVER_ERROR)
     .send({
-      message: 'promise rejected'
+      message: err.message || 'Rejected'
     })
 }

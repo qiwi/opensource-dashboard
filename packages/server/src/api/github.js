@@ -8,7 +8,14 @@ export function getRepos(opts) {
     .getForOrg(opts)
 }
 
+export function getRepo(opts) {
+  return octokit
+    .repos
+    .get(opts)
+}
+
 export default {
   octokit,
-  getRepos
+  getRepos,
+  getRepo
 }
