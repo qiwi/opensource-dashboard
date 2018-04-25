@@ -1,9 +1,11 @@
-import Octokit from '@octokit/resr'
+import Octokit from '@octokit/rest'
 
 const octokit = new Octokit()
 
-export function getRepos() {
-
+export function getRepos(opts) {
+  return octokit
+    .repos
+    .getForOrg(opts)
 }
 
 export default {

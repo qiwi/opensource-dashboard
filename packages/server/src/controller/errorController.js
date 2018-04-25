@@ -15,3 +15,11 @@ export default function(err, req, res, next) {
     .status(code)
     .send(data)
 }
+
+export function handleReject(err) {
+  res
+    .status(INTERNAL_SERVER_ERROR)
+    .send({
+      message: 'promise rejected'
+    })
+}
