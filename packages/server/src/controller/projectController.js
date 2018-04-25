@@ -18,6 +18,14 @@ function getInfo(req, res, next) {
     .catch(err => handleReject(err, res))
 }
 
+function getCommits(req, res, next) {
+  projectRepository
+    .getCommits(req.params.name)
+    .then(res.send.bind(res))
+    .catch(err => handleReject(err, res))
+}
+
 export default router
   .get('/', getEntireInfo)
   .get('/:name', getInfo)
+  .get('/:name/commit', getCommits)

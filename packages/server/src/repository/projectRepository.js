@@ -1,6 +1,6 @@
 import {github} from '../api'
 import config from '../config'
-import {Repo} from '../model'
+import {Repo, Commit} from '../model'
 
 function getRepos() {
   return github
@@ -20,20 +20,35 @@ function getRepo(name) {
     .then(formatRepo)
 }
 
+function getCommits(name) {
+  return github
+    .getCommits({
+      owner: config.repo.org,
+      repo: name
+    })
+    .then(formatCommits)
+}
+
 function formatRepos(repos) {
   return repos.data.map(repo => new Repo(repo))
 }
 
 function formatRepo (repo) {
-  return repo.data
+  return new Repo(repo.data)
+}
+
+function formatCommits(commits) {
+  return commits.data.map(commit => new Commit(commit))
 }
 
 export default {
   getRepos,
-  getRepo
+  getRepo,
+  getCommits
 }
 
 export {
   getRepos,
-  getRepo
+  getRepo,
+  getCommits
 }

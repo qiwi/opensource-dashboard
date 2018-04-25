@@ -14,8 +14,19 @@ export function getRepo(opts) {
     .get(opts)
 }
 
+function getCommits(opts) {
+  return octokit
+    .repos
+    .getCommits(opts)
+}
+
+function getRefs(opts) {
+  octokit.gitdata.getReference(opts)
+}
+
 export default {
   octokit,
   getRepos,
-  getRepo
+  getRepo,
+  getCommits
 }

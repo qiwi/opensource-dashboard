@@ -1,7 +1,7 @@
-export default class GithubRepoModel {
-  constructor(opts) {
-    this.name = opts.name
-    this.fullName = opts.full_name
-    this.description = opts.description
+export default class RepoModel {
+  constructor(data) {
+    this.name = data.name
+    this.fullName = data.full_name
+    this.description = data.description
   }
 }
