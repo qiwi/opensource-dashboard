@@ -1,0 +1,8 @@
+{
+  "server": {
+    "port": 8080
+  },
+  "repo" : {
+    "org": "qiwi"
+  }
+}
