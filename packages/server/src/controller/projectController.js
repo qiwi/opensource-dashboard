@@ -25,7 +25,15 @@ function getCommits(req, res, next) {
     .catch(err => handleReject(err, res))
 }
 
+function getStats(req, res, next) {
+  projectRepository
+    .getStats()
+    .then(res.send.bind(res))
+    .catch(err => handleReject(err, res))
+}
+
 export default router
   .get('/', getEntireInfo)
+  .get('/stats', getStats)
   .get('/:name', getInfo)
   .get('/:name/commit', getCommits)

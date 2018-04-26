@@ -93,7 +93,7 @@ function formatCoverage(coverage) {
 function getProjects() {
   return getRepos()
     .then(repos => {
-      return Promise.all(repos.slice(-5).map(({name}) => getProject(name)))
+      return Promise.all(repos.slice(-10).map(({name}) => getProject(name)))
     })
 }
 
@@ -101,14 +101,32 @@ function getProject(name) {
   const climate = getCodeClimate(name)
   const builds = getTravisBuilds(name)
   const repo = getRepo(name)
+  const cov = []
+  let dateFirst = Infinity
+  let dateLast = 0
+  const dateMap = {}
   const commits = getCommits(name)
     .then(commits => {
       return Promise.all(commits.map(commit => {
+        if (commit.date > dateLast) {
+          dateLast = commit.date
+        }
+
+        if (commit.date < dateFirst) {
+          dateFirst = commit.date
+        }
+
+        dateMap[commit.sha] = commit.date
+
         return getCoverage({
           sha: commit.sha
         })
           .then(coverage => {
-            commit.coverage =  coverage
+            if (coverage) {
+              coverage.sha = commit.sha
+              cov.push(coverage)
+            }
+            //commit.coverage =  coverage
 
             return commit
           })
@@ -121,14 +139,96 @@ function getProject(name) {
     .then(([repo, commits, builds, climate]) => {
 
       repo.commits = commits
-      repo.builds = builds
-      repo.climate = climate
+      repo.builds = normalizeDataset(builds, dateMap)
+      repo.climate = normalizeDataset(climate, dateMap)
+      repo.coverage = normalizeDataset(cov, dateMap)
+      repo.dateFirst = dateFirst
+      repo.dateLast = dateLast
 
       return repo
     })
 }
 
+function normalizeDataset(data, dateMap) {
+  if (!data || !data.map) {
+    return []
+  }
+
+  return data.map(item => {
+    item.date = dateMap[item.sha]
+    return item
+  })
+}
+
+function getStats() {
+  return getProjects()
+    .then(projects => {
+      let dateFirst = Infinity
+      let dateLast = 0
+
+      projects.forEach(project => {
+        if (project.dateLast > dateLast) {
+          dateLast = project.dateLast
+        }
+
+        if (project.dateFirst < dateFirst) {
+          dateFirst = project.dateFirst
+        }
+      })
+
+      const len = 10
+      const dateDiff = dateLast - dateFirst
+      const step = dateDiff / len
+      const dateRanges = [...Array(len)].map((v, k) => new Date(k * step + dateFirst.getTime()))
+
+      const builds = []
+      const coverage = []
+      const climate = []
+      dateRanges.forEach((v, i) => {
+        if (i) {
+          const dateFrom = dateRanges[i - 1]
+          const dateTo = v
+
+          let covCount = 0
+          let covValue = 0
+          let climateCount = 0
+          let climateValue = 0
+          let buildCount = 0
+          let buildValue = 0
+
+          projects.forEach(project => {
+            project.coverage.forEach((cov) => {
+              if (cov.date >= dateFrom && cov.date <= dateTo) {
+                covValue += cov.covered_percent
+                covCount += 1
+              }
+            })
+
+            project.builds.forEach(build => {
+              if (build.date >= dateFrom && build.date <= dateTo) {
+                buildValue += +build.success
+                buildCount += 1
+              }
+            })
+          })
+
+          coverage.push(covValue/covCount)
+          builds.push(buildValue/buildCount)
+        }
+      })
+
+      return {
+        dateRanges,
+        dateFirst,
+        dateLast,
+        coverage,
+        builds
+      }
+    })
+}
+
 export default {
+  getStats,
   getRepos,
   getRepo,
   getCommits,
@@ -137,6 +237,7 @@ export default {
 }
 
 export {
+  getStats,
   getRepos,
   getRepo,
   getCommits,
