@@ -1,3 +1,1 @@
-export {
-  Promise
-}
+export default Promise

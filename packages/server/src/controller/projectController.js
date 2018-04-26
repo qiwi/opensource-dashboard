@@ -6,14 +6,14 @@ const router = new Router()
 
 function getEntireInfo (req, res, next) {
   projectRepository
-    .getRepos()
+    .getProjects()
     .then(res.send.bind(res))
     .catch(err => handleReject(err, res))
 }
 
 function getInfo(req, res, next) {
   projectRepository
-    .getRepo(req.params.name)
+    .getProject(req.params.name)
     .then(res.send.bind(res))
     .catch(err => handleReject(err, res))
 }
