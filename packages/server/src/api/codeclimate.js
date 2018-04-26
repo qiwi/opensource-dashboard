@@ -3,7 +3,7 @@ import axios from '../common/transport'
 const URL = 'https://api.codeclimate.com/v1'
 
 function getBuilds(repoId) {
-  const url = `${URL}/${repoId}/builds`
+  const url = `${URL}/repos/${repoId}/builds`
 
   return axios
     .get(url)
@@ -18,7 +18,7 @@ function getRepo(opt) {
 }
 
 function getSnapshot(repoId, snapshotId) {
-  const url = `${URL}/${repoId}/builds/${snapshotId}`
+  const url = `${URL}/repos/${repoId}/snapshots/${snapshotId}`
 
   return axios
     .get(url)

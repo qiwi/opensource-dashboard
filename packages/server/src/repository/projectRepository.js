@@ -1,6 +1,6 @@
 import {github, coveralls, travis, codeclimate} from '../api'
 import config from '../config'
-import {Repo, Commit, Coverage, Build} from '../model'
+import {Repo, Commit, Coverage, Build, Codeclimate} from '../model'
 import {Promise} from '../common'
 
 function getRepos() {
@@ -48,8 +48,6 @@ function getTravisBuilds(name) {
 }
 
 function getCodeClimate(name) {
-  return new Promise((res, rej) => res({climate: 'climate'}))
-
   return codeclimate
     .getRepo({
       owner: config.repo.org,
@@ -57,17 +55,25 @@ function getCodeClimate(name) {
     })
     .then(data => {
       const repoId = data.data.data[0].id
+
       return codeclimate
         .getBuilds(repoId)
         .then(builds => {
-          return Promise.all(builds.map(build => {
+
+          return Promise.all(builds.data.data.map(build => {
             const snapshotId = build.relationships.snapshot.data.id
 
-            return codeclimate.getSnapshot(repoId, snapshotId)
+            return codeclimate
+              .getSnapshot(repoId, snapshotId)
+              .then(formatClimate)
           }))
         })
     })
     .catch(() => null)
+}
+
+function formatClimate(climate) {
+  return new Codeclimate(climate.data.data)
 }
 
 function formatBuilds(builds) {
@@ -93,7 +99,7 @@ function formatCoverage(coverage) {
 function getProjects() {
   return getRepos()
     .then(repos => {
-      return Promise.all(repos.slice(-10).map(({name}) => getProject(name)))
+      return Promise.all(repos.slice(-7).map(({name}) => getProject(name)))
     })
 }
 
@@ -126,7 +132,6 @@ function getProject(name) {
               coverage.sha = commit.sha
               cov.push(coverage)
             }
-            //commit.coverage =  coverage
 
             return commit
           })
@@ -179,7 +184,7 @@ function getStats() {
       const len = 10
       const dateDiff = dateLast - dateFirst
       const step = dateDiff / len
-      const dateRanges = [...Array(len)].map((v, k) => new Date(k * step + dateFirst.getTime()))
+      const dateRanges = [...Array(len)].map((v, k) => new Date(k * step + dateFirst.getTime())).concat(dateLast)
 
       const builds = []
       const coverage = []
@@ -188,11 +193,13 @@ function getStats() {
         if (i) {
           const dateFrom = dateRanges[i - 1]
           const dateTo = v
+          const date = new Date((dateTo.getTime() + dateFrom.getTime()) / 2)
 
           let covCount = 0
           let covValue = 0
           let climateCount = 0
-          let climateValue = 0
+          let climateEst = 0
+          let climateDebtRatio = 0
           let buildCount = 0
           let buildValue = 0
 
@@ -210,10 +217,19 @@ function getStats() {
                 buildCount += 1
               }
             })
+
+            project.climate.forEach(climate => {
+              if (climate.date >= dateFrom && climate.date <= dateTo) {
+                climateDebtRatio += +climate.debtRatio
+                climateEst += +climate.debtEst
+                climateCount += 1
+              }
+            })
           })
 
-          coverage.push(covValue/covCount)
-          builds.push(buildValue/buildCount)
+          coverage.push({date, covered_percent: covValue/covCount})
+          builds.push({date, success: buildValue/buildCount})
+          climate.push({date, debtRatio: climateDebtRatio/climateCount})
         }
       })
 
@@ -222,7 +238,8 @@ function getStats() {
         dateFirst,
         dateLast,
         coverage,
-        builds
+        builds,
+        climate
       }
     })
 }
