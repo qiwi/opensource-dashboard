@@ -35,5 +35,6 @@ function getStats(req, res, next) {
 export default router
   .get('/', getEntireInfo)
   .get('/stats', getStats)
-  .get('/:name', getInfo)
-  .get('/:name/commit', getCommits)
+  .get('/project/', getEntireInfo)
+  .get('/project/:name', getInfo)
+  .get('/project/:name/commit', getCommits)

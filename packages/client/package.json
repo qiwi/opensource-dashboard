@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "highcharts": "^6.1.0",
+    "highcharts-react-official": "^1.1.0",
+    "history": "^4.7.2",
+    "normalize.css": "^8.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -13,6 +18,7 @@
     "react-text-mask-hoc": "^0.10.6",
     "reduce-reducers": "^0.1.2",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
     "styled-components": "^3.2.6"
   },
   "scripts": {
