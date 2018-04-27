@@ -11,4 +11,4 @@ It's time to assemble projects info in one place. Qiwi Hackathon #6. April 2018.
 
 #### The result
 
-<img src="./docs/img/view.png" alt="View" height="250px"/>
+<img src="./readme/img/view.png" alt="View" height="300px"/>
