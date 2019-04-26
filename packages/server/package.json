@@ -14,11 +14,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^15.2.6",
+    "@octokit/rest": "^16.25.0",
     "@std/esm": "^0.26.0",
     "axios": "^0.18.0",
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "lodash": "^4.17.10"
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11"
   }
 }

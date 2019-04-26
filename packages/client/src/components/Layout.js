@@ -1,4 +1,4 @@
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 
 export const Wrap = styled.main`flex: 1 0 auto;`;
@@ -16,7 +16,7 @@ export const Root = styled.div`
 	} 
 `;
 
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
 	html, body, #root{
         height: 100%;
         font-size: 16px;
