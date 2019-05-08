@@ -19,13 +19,16 @@
     "reduce-reducers": "^1.0.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "snyk": "^1.162.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "browserslist": {
     "production": [
@@ -38,5 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "snyk": true
 }
