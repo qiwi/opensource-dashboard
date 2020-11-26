@@ -1,7 +1,7 @@
 {
   "name": "@qiwi/dashboard-common",
   "version": "0.0.0",
-  "description": "Opensourse-dashboard common assets",
+  "description": "Opensource-dashboard common assets",
   "private": false,
   "publishConfig": {
     "access": "public"

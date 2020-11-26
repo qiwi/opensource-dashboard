@@ -1,3 +1,3 @@
-# @qiwi/nestjs-enterprise-infra
-QIWI Nestjs enterprise monorepo infra package: common build assets, config, and so on.
+# @qiwi/dashboard-infra
+QIWI opensource dashboard monorepo infra package: common build assets, config, and so on.
 
