@@ -1,0 +1,13 @@
+{
+  "extends": "./packages/infra/tsconfig.compiler.json",
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@qiwi/dashboard-climate": ["./climate/src/main/ts"],
+      "@qiwi/dashboard-common": ["./common/src/main/ts"],
+      "@qiwi/dashboard-infra": ["./infra/src/main/ts"],
+      "@qiwi/dashboard": ["./dashboard/src/main/ts"],
+      "@qiwi/dashboard-github": ["./github/src/main/ts"]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "@qiwi/dashboard",
+  "version": "0.0.0",
+  "description": "Dashboard for opensource",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "main": "target/es5/index.js",
+  "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "target",
+    "typings",
+    "flow-typed"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "@qiwi/nestjs-enterprise-infra": "*",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/opensource-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/opensource-dashboard/issues"
+  },
+  "homepage": "https://github.com/qiwi/opensource-dashboard#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
