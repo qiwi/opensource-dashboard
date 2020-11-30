@@ -1,5 +1,5 @@
 {
-  "name": "@qiwi/opensource-dashboard",
+  "name": "@qiwi/dashboard-monorepo",
   "version": "0.0.0",
   "description": "Dashboard for github.com/qiwi",
   "workspaces": [
