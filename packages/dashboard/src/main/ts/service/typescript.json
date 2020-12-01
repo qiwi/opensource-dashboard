@@ -1,0 +1,189 @@
+{
+  "packageNamePattern": "^typescript$",
+  "depType": "all",
+  "source": "auto",
+  "data": [
+    {
+      "name": "typescript",
+      "usageCount": 43,
+      "ratio": 0.6825,
+      "repos": [
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fbuildstamp"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fcard-info"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fcommon-formatters"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fconsul-service-discovery"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fcyclone"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fdecorator-utils"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fdeep-proxy"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fevent-transmitter"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fhealth-indicator"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Finno_basic_server"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Finno_ng"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Finno_ts"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Finside-out-promise"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fjson-rpc"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fldap"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Flibdefkit"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Flicense"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Flint-config-qiwi"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fmasker"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fmixin"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fnestjs-enterprise"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fnestjs-redoc"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fnexus"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fnpm-batch-action"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fpg_comparator"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fpijma-v2"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fpijma"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fprimitive-storage"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fprotopipe"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fqueuefy"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fseal_online_api_node_server"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fsemantic-release-gh-pages-plugin"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fserializer"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fstdstream-snapshot"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fsubstrate"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Ftemplate-shot"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Ftest_task_node_server"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fthrift"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fthromise"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Ftravis-toolkit"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Funiconfig"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fwatch_bot"
+        },
+        {
+          "vcs": "github",
+          "repo": "github%2Fqiwi%2Fyet-another-mutex"
+        }
+      ],
+      "minVersion": "2.1.6",
+      "maxVersion": "4.1.2"
+    }
+  ],
+  "totalProjectsCount": 63
+}

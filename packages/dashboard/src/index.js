@@ -1,1 +1,1 @@
-import './main/ts/index'
+import './main/ts/ui/view/components/env'
