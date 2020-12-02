@@ -8,5 +8,5 @@ export const Spreader = styled('div')`
   min-width: 400px;
   > * {
     padding: 0 50px !important;
-  } 
+  }
 `
