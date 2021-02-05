@@ -19,20 +19,27 @@
     "build": "SKIP_PREFLIGHT_CHECK=true PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"src/**/*.(ts|tsx)\"",
+    "format": "prettier --write \"src/**/*.(ts|tsx|js|jsx)\"",
     "lint": "eslint src/**/*.{ts,tsx,js}",
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@qiwi/pijma-core": "^1.117.1",
-    "@qiwi/pijma-desktop": "^1.118.0",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "react-scripts": "3.4.4",
-    "web-vitals": "^0.2.4"
+    "@qiwi/pijma-core": "^1.119.1",
+    "@qiwi/pijma-desktop": "^1.122.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "axios": "^0.21.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^1.1.0"
   },
   "devDependencies": {
-    "@qiwi/dashboard-infra": "*"
+    "@qiwi/dashboard-infra": "*",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@types/axios": "^0.14.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/uuid": "^8.3.0"
   },
   "keywords": [],
   "repository": {

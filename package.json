@@ -31,10 +31,13 @@
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
     "snazzy": "^9.0.0",
-    "terser": "^5.4.0"
+    "terser": "^5.5.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qiwi/opensource-dashboard.git"
+  },
+  "resolutions": {
+    "jest": "26.6.0"
   }
 }

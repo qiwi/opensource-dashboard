@@ -1,1 +1,2 @@
-export { treeReportService } from './treeReportSerivce'
+export { reportService } from './reportService'
+export { crawlerService } from './crawlerService'
