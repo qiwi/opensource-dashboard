@@ -1,6 +1,18 @@
 {
   "branch": "master",
   "plugins": [
+    [
+      "@qiwi/semrel-metabranch",
+      {
+        "publish": {
+          "action": "push",
+          "branch": "gh-pages",
+          "from": "./build",
+          "to": ".",
+          "message": "update @qiwi/dashboard SPA, ${nextRelease.gitTag}"
+        }
+      }
+    ],
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
