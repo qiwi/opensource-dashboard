@@ -22,7 +22,8 @@
     "postupdate": "yarn && yarn bootstrap && npx yarn-audit-fix && yarn build && yarn test",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
-    "format": "lerna run format"
+    "format": "lerna run format",
+    "release": "npx -p @qiwi/semrel-toolkit multi-semrel"
   },
   "prettier": "prettier-config-qiwi",
   "devDependencies": {
