@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crawler renders correctly 1`] = `
+<div>
+  <div
+    class="css-1rwr66l"
+  >
+    <div
+      class="css-4gfk9w"
+    >
+      <div>
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -4,6 +4,10 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
 pids
@@ -20,8 +24,10 @@ coverage
 # Bundle
 build
 dist
+lib
+target
 
-#Docs
+# Docs
 docs
 doc
 
@@ -35,6 +41,24 @@ flow-typed/npm/
 .node_repl_history
 .env
 
+# IDE
 .idea
 *.iml
-/data
+
+# Libdefs
+flow-typed
+typings
+
+# Temp
+temp
+*.tmp
+build-info.json
+
+# Typescript
+*.tsbuildinfo
+.tsbuildinfo
+buildcache
+.buildcache
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd

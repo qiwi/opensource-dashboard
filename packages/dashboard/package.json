@@ -1,0 +1,66 @@
+{
+  "name": "@qiwi/dashboard",
+  "version": "0.0.0",
+  "description": "Dashboard for opensource",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "main": "target/es5/index.js",
+  "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "target",
+    "typings",
+    "flow-typed"
+  ],
+  "scripts": {
+    "start": "SKIP_PREFLIGHT_CHECK=true PUBLIC_URL=/ react-scripts start",
+    "build": "SKIP_PREFLIGHT_CHECK=true PUBLIC_URL=/ react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.(ts|tsx|js|jsx)\"",
+    "lint": "eslint src/**/*.{ts,tsx,js}",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@qiwi/pijma-core": "^1.127.2",
+    "@qiwi/pijma-desktop": "^1.122.0",
+    "axios": "^0.21.1",
+    "react": "^16.8.6",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^1.1.0"
+  },
+  "devDependencies": {
+    "@qiwi/dashboard-infra": "*",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@types/axios": "^0.14.0",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/uuid": "^8.3.0"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/opensource-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/opensource-dashboard/issues"
+  },
+  "homepage": "https://github.com/qiwi/opensource-dashboard#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
