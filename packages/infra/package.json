@@ -1,6 +1,6 @@
 {
   "name": "@qiwi/dashboard-infra",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "QIWI opensource dashboard infra toolkit",
   "publishConfig": {
     "access": "public"
