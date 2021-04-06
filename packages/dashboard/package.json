@@ -1,6 +1,6 @@
 {
   "name": "@qiwi/dashboard",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Dashboard for opensource",
   "publishConfig": {
     "access": "public"
@@ -33,7 +33,7 @@
     "web-vitals": "^1.1.0"
   },
   "devDependencies": {
-    "@qiwi/dashboard-infra": "*",
+    "@qiwi/dashboard-infra": "1.0.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@types/axios": "^0.14.0",
