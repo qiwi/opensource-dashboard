@@ -2716,7 +2716,7 @@
 "@qiwi/pijma-core@1.128.0", "@qiwi/pijma-core@^1.127.2":
   version "1.128.0"
   resolved "https://registry.yarnpkg.com/@qiwi/pijma-core/-/pijma-core-1.128.0.tgz#e913f09324a49c425565b310f825df3631bea25e"
-  integrity "sha1-6RPwkySknEJVZbMQ+CXfNjG+ol4= sha512-dVJ8rK9HwsnWjWH+9x6ipcCcL7BS1nefnNLM5id0/CtvUrC6vfEFfciVQPGvBmwOTNht7aTnSty9vGBeVtEpoQ=="
+  integrity sha512-dVJ8rK9HwsnWjWH+9x6ipcCcL7BS1nefnNLM5id0/CtvUrC6vfEFfciVQPGvBmwOTNht7aTnSty9vGBeVtEpoQ==
   dependencies:
     "@emotion/core" "^10.0.16"
     "@emotion/styled" "^10.0.15"
@@ -2742,7 +2742,7 @@
 "@qiwi/pijma-desktop@^1.122.0":
   version "1.128.0"
   resolved "https://registry.yarnpkg.com/@qiwi/pijma-desktop/-/pijma-desktop-1.128.0.tgz#f1b0264bec57e6fd2325bec0e9043d11ed4fb908"
-  integrity "sha1-8bAmS+xX5v0jJb7A6QQ9Ee1PuQg= sha512-6HHSuhJ2OyYDzXc5P764lqQEjRM35DlRobUVjOrfDDPW9uwGdN3YvCQgBExpprCnHj0iJZnisubAkLxgGi4Cqg=="
+  integrity sha512-6HHSuhJ2OyYDzXc5P764lqQEjRM35DlRobUVjOrfDDPW9uwGdN3YvCQgBExpprCnHj0iJZnisubAkLxgGi4Cqg==
   dependencies:
     "@emotion/core" "^10.0.16"
     "@emotion/styled" "^10.0.15"
@@ -3238,7 +3238,7 @@
     "@types/react" "*"
     "@types/react-transition-group" "*"
 
-"@types/react-router-dom@^5.2.0":
+"@types/react-router-dom@^5.1.7":
   version "5.1.7"
   resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.1.7.tgz#a126d9ea76079ffbbdb0d9225073eb5797ab7271"
   integrity sha512-D5mHD6TbdV/DNHYsnwBTv+y73ei+mMjrkGrla86HthE4/PVvL1J94Bu3qABU+COXzpL23T1EZapVVpwHuBXiUg==
@@ -6362,7 +6362,7 @@ ejs@^2.6.1:
 electron-to-chromium@^1.3.564, electron-to-chromium@^1.3.649:
   version "1.3.708"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.708.tgz#127970d2fc665ab356be59e668f2914856419176"
-  integrity "sha1-Enlw0vxmWrNWvlnmaPKRSFZBkXY= sha512-+A8ggYZ5riOLMcVAuzHx6bforaPzaiLnW1QOMD2SlMYQVi7QQTyQ/WrlZoebIH9ikmgr+tLJGpNITFFCUiQcPw=="
+  integrity sha512-+A8ggYZ5riOLMcVAuzHx6bforaPzaiLnW1QOMD2SlMYQVi7QQTyQ/WrlZoebIH9ikmgr+tLJGpNITFFCUiQcPw==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -6700,7 +6700,7 @@ eslint-plugin-es@^3.0.0:
 eslint-plugin-flowtype@^5.2.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-5.6.0.tgz#9ddba1ce31990c53e144b3a545b7c74b1d164fd9"
-  integrity "sha1-nduhzjGZDFPhRLOlRbfHSx0WT9k= sha512-XbeDejiL+SecDInj9On/9D4EM31kUp6B3uWYsBH6Vsb2CfaFWiUHvosAZx1TafVjp6izLC7D3kpix1DIpDF4Qw=="
+  integrity sha512-XbeDejiL+SecDInj9On/9D4EM31kUp6B3uWYsBH6Vsb2CfaFWiUHvosAZx1TafVjp6izLC7D3kpix1DIpDF4Qw==
   dependencies:
     lodash "^4.17.15"
     string-natural-compare "^3.0.1"
