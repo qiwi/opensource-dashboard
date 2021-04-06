@@ -1,3 +1,10 @@
+# @qiwi/dashboard [1.1.0](https://github.com/qiwi/opensource-dashboard/compare/@qiwi/dashboard@1.0.0...@qiwi/dashboard@1.1.0) (2021-04-06)
+
+
+### Features
+
+* **dashboard:** change app title ([#35](https://github.com/qiwi/opensource-dashboard/issues/35)) ([37d3bf9](https://github.com/qiwi/opensource-dashboard/commit/37d3bf981f9d4c91f425f1d1a0a8cd9cbe712b7a))
+
 # 1.0.0 (2021-04-06)
 
 
