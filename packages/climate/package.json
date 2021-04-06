@@ -1,6 +1,6 @@
 {
   "name": "@qiwi/dashboard-climate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Climate",
   "publishConfig": {
     "access": "public"
